@@ -36,7 +36,7 @@ class AnimeCrawler extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'anime';
+        return 'translate';
     }
 
     /**

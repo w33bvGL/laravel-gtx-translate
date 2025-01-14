@@ -1,21 +1,13 @@
 <?php
 
-namespace AniMik\MalCrawler\Services\Studio;
+namespace AniMik\MalCrawler\Services\Text;
 
 use AniMik\MalCrawler\Services\BaseService;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\DomCrawler\Crawler;
-use Symfony\Component\HttpClient\HttpClient;
-use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class CrawlAnimeStudios extends BaseService
+class TranslateText extends BaseService
 {
-    protected HttpClientInterface $httpClient;
-
-    public function __construct()
-    {
-        $this->httpClient = HttpClient::create();
-    }
 
     /**
      * Получить студии с указанного URL
