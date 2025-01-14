@@ -1,6 +1,6 @@
 {
-  "name": "animik/mal-crawler",
-  "description": "mal crawler",
+  "name": "animik/google-translate-scraper",
+  "description": "google-translate-scraper",
   "type": "library",
   "autoload": {
     "psr-4": {
