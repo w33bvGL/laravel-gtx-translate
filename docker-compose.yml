@@ -1,0 +1,23 @@
+services:
+    phpdoc:
+        container_name: mal-crawler-docs
+        build: .
+        command: >
+            sh -c "phpdoc &&
+                   php -S 0.0.0.0:8080 -t /data/docs"
+        ports:
+            - "8080:8080"
+        volumes:
+            - .:/data
+    app:
+        container_name: mal-crawler
+        build: .
+        command: >
+            sh -c "git config --global --add safe.directory /data &&
+                   composer install &&
+                   ./vendor/bin/phpunit tests &&
+                   ./vendor/bin/pint &&
+                   tail -f /dev/null"
+        volumes:
+            - .:/data
+            - ./vendor:/data/vendor
