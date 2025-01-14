@@ -2,14 +2,6 @@
 
 namespace AniMik\MalCrawler\Providers;
 
-use AniMik\MalCrawler\Services\Anime\CrawlAnime;
-use AniMik\MalCrawler\Services\Anime\CrawlAnimeEpisodes;
-use AniMik\MalCrawler\Services\Anime\CrawlCharactersAndStaff;
-use AniMik\MalCrawler\Services\Filter\CrawlAnimeFilters;
-use AniMik\MalCrawler\Services\Genre\CrawlAnimeGenres;
-use AniMik\MalCrawler\Services\Ranking\CrawlAnimeRankings;
-use AniMik\MalCrawler\Services\Season\CrawlAnimeSeasons;
-use AniMik\MalCrawler\Services\Studio\CrawlAnimeStudios;
 use Illuminate\Support\ServiceProvider;
 
 class MalCrawlerServiceProvider extends ServiceProvider
@@ -22,21 +14,14 @@ class MalCrawlerServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton('anime', function () {
+        $this->app->singleton('translate', function () {
             return [
-                'genres' => new CrawlAnimeGenres,
-                'studios' => new CrawlAnimeStudios,
-                'rankings' => new CrawlAnimeRankings,
-                'seasons' => new CrawlAnimeSeasons,
-                'filters' => new CrawlAnimeFilters,
-                'anime' => new crawlAnime,
-                'charactersAndStaff' => new CrawlCharactersAndStaff,
-                'episodesList' => new CrawlAnimeEpisodes,
+                'text' => new TranslateText,
             ];
         });
 
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/mal-crawler.php', 'malCrawler'
+            __DIR__.'/../../config/mal-crawler.php', 'malCrawler'
         );
     }
 
@@ -48,7 +33,7 @@ class MalCrawlerServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../../config/mal-crawler.php' => config_path('mal-crawler.php'),
+            __DIR__.'/../../config/mal-crawler.php' => config_path('mal-crawler.php'),
         ]);
     }
 }

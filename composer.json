@@ -38,7 +38,7 @@
         "AniMik\\MalCrawler\\Providers\\MalCrawlerServiceProvider"
       ],
       "aliases": {
-        "AnimeCrawler": "AniMik\\MalCrawler\\Facades\\AnimeCrawler"
+        "AnimeCrawler": "Translator"
       }
     },
     "funding": {
