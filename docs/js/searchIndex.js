@@ -1,97 +1,97 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator",
             "name": "AnimeCrawler",
             "summary": "Facade\u0020\u0434\u043B\u044F\u0020\u0430\u043D\u0438\u043C\u0435\u002D\u043A\u0440\u0430\u0443\u043B\u0435\u0440\u0430,\u0020\u043A\u043E\u0442\u043E\u0440\u044B\u0439\u0020\u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\u0020\u0434\u043E\u0441\u0442\u0443\u043F\u0020\u043A\u0020\u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u043C\u0020\u043C\u0435\u0442\u043E\u0434\u0430\u043C\n\u043A\u0440\u0430\u0443\u043B\u0438\u043D\u0433\u0430\u0020\u0434\u0430\u043D\u043D\u044B\u0445\u0020\u043E\u0020\u0430\u043D\u0438\u043C\u0435,\u0020\u0442\u0430\u043A\u0438\u0445\u0020\u043A\u0430\u043A\u0020\u0436\u0430\u043D\u0440\u044B,\u0020\u0441\u0442\u0443\u0434\u0438\u0438,\u0020\u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0438,\u0020\u0441\u0435\u0437\u043E\u043D\u044B,\u0020\u0442\u0438\u043F\u044B\u0020\u0438\u0020\u0434\u0440\u0443\u0433\u0438\u0435.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AgetFacadeAccessor\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AgetFacadeAccessor\u0028\u0029",
             "name": "getFacadeAccessor",
             "summary": "\u041F\u043E\u043B\u0443\u0447\u0430\u0435\u0442\u0020\u0444\u0430\u0441\u0430\u0434\u0020\u0434\u043B\u044F\u0020\u0434\u043E\u0441\u0442\u0443\u043F\u0430\u0020\u043A\u0020\u0441\u0435\u0440\u0432\u0438\u0441\u0443\u0020\u0430\u043D\u0438\u043C\u0435.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_getFacadeAccessor"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlGenres\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlGenres\u0028\u0029",
             "name": "crawlGenres",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0436\u0430\u043D\u0440\u044B\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u0441\u0020MyAnimeList.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlGenres"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlExplicitGenres\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlExplicitGenres\u0028\u0029",
             "name": "crawlExplicitGenres",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u044F\u0432\u043D\u044B\u0435\u0020\u0436\u0430\u043D\u0440\u044B\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u0028\u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440,\u0020\u0434\u043B\u044F\u0020\u0444\u0438\u043B\u044C\u043C\u043E\u0432\u0020\u0441\u0020\u043E\u0442\u043A\u0440\u043E\u0432\u0435\u043D\u043D\u044B\u043C\u0020\u0441\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435\u043C\u0029.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlExplicitGenres"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlThemes\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlThemes\u0028\u0029",
             "name": "crawlThemes",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0442\u0435\u043C\u044B\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u0028\u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440,\u0020\u0440\u043E\u043C\u0430\u043D\u0442\u0438\u043A\u0430,\u0020\u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F\u0029.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlThemes"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlDemographics\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlDemographics\u0028\u0029",
             "name": "crawlDemographics",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0434\u0435\u043C\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u0433\u0440\u0443\u043F\u043F\u044B\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u0028\u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440,\u0020\u0448\u043E\u043D\u0435\u043D,\u0020\u0441\u0451\u043D\u0435\u043D,\u0020\u0441\u044D\u0439\u043D\u0435\u043D\u0020\u0438\u0020\u0442.\u0434.\u0029.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlDemographics"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlGenreDescription\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlGenreDescription\u0028\u0029",
             "name": "crawlGenreDescription",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435\u0020\u0436\u0430\u043D\u0440\u0430\u0020\u043F\u043E\u0020\u0435\u0433\u043E\u0020malId.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlGenreDescription"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlStudios\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlStudios\u0028\u0029",
             "name": "crawlStudios",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0441\u0442\u0443\u0434\u0438\u0438\u0020\u0430\u043D\u0438\u043C\u0435.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlStudios"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlStudioInformation\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlStudioInformation\u0028\u0029",
             "name": "crawlStudioInformation",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E\u0020\u043E\u0020\u0441\u0442\u0443\u0434\u0438\u0438\u0020\u043F\u043E\u0020\u0435\u0451\u0020malId.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlStudioInformation"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlRankings\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlRankings\u0028\u0029",
             "name": "crawlRankings",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0438\u0020\u0430\u043D\u0438\u043C\u0435.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlRankings"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlSeasons\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlSeasons\u0028\u0029",
             "name": "crawlSeasons",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0441\u0435\u0437\u043E\u043D\u044B\u0020\u0430\u043D\u0438\u043C\u0435.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlSeasons"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlTypes\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlTypes\u0028\u0029",
             "name": "crawlTypes",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0442\u0438\u043F\u044B\u0020\u0430\u043D\u0438\u043C\u0435,\u0020\u0442\u0430\u043A\u0438\u0435\u0020\u043A\u0430\u043A\u0020\u0441\u0435\u0440\u0438\u0430\u043B,\u0020\u0444\u0438\u043B\u044C\u043C,\u0020OVA,\u0020ONA\u0020\u0438\u0020\u0442.\u0434.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlTypes"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlStatus\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlStatus\u0028\u0029",
             "name": "crawlStatus",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0441\u0442\u0430\u0442\u0443\u0441\u044B\u0020\u0430\u043D\u0438\u043C\u0435,\u0020\u0442\u0430\u043A\u0438\u0435\u0020\u043A\u0430\u043A\u0020\u0437\u0430\u0432\u0435\u0440\u0448\u0451\u043D\u043D\u043E\u0435,\u0020\u0432\u044B\u0445\u043E\u0434\u044F\u0449\u0435\u0435\u0020\u0438\u0020\u0442.\u0434.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlStatus"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlRated\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlRated\u0028\u0029",
             "name": "crawlRated",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0432\u043E\u0437\u0440\u0430\u0441\u0442\u043D\u044B\u0435\u0020\u0440\u0435\u0439\u0442\u0438\u043D\u0433\u0438\u0020\u0430\u043D\u0438\u043C\u0435,\u0020\u0442\u0430\u043A\u0438\u0435\u0020\u043A\u0430\u043A\u0020G,\u0020PG,\u0020PG\u002D13,\u0020R\u0020\u0438\u0020\u0442.\u0434.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlRated"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlColumns\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlColumns\u0028\u0029",
             "name": "crawlColumns",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0441\u0442\u043E\u043B\u0431\u0446\u044B\u0020\u0430\u043D\u0438\u043C\u0435,\u0020\u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u043C\u044B\u0435\u0020\u0432\u0020\u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430\u0445\u0020\u043F\u043E\u0438\u0441\u043A\u0430\u0020\u0438\u043B\u0438\u0020\u043A\u0430\u0442\u0430\u043B\u043E\u0433\u0430\u0445.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlColumns"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlAnime\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlAnime\u0028\u0029",
             "name": "crawlAnime",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E\u0020\u043E\u0431\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u043F\u043E\u0020\u0435\u0433\u043E\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440\u0443\u0020\u043D\u0430\u0020MyAnimeList\u0020\u0028MAL\u0029.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlAnime"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlAnimeCharactersAndStaff\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlAnimeCharactersAndStaff\u0028\u0029",
             "name": "crawlAnimeCharactersAndStaff",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E\u0020\u043E\u0020\u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430\u0445\u0020\u0438\u0020\u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u0445\u0020\u0434\u043B\u044F\u0020\u0432\u0441\u0435\u0445\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u043D\u0430\u0020\u043E\u0441\u043D\u043E\u0432\u0435\u0020\u0438\u0445\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440\u0430\u0020MyAnimeList\u0020\u0028MAL\u0029.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlAnimeCharactersAndStaff"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlValidAnimeIds\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlValidAnimeIds\u0028\u0029",
             "name": "crawlValidAnimeIds",
             "summary": "\u041A\u0440\u0430\u0443\u043B\u0438\u0442\u0020\u0434\u0430\u043D\u043D\u044B\u0435\u0020\u043E\u0020\u0432\u0430\u043B\u0438\u0434\u043D\u044B\u0445\u0020ID\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u0441\u0020\u0432\u043D\u0435\u0448\u043D\u0435\u0433\u043E\u0020\u0440\u0435\u0441\u0443\u0440\u0441\u0430\u0020\u0438\u043B\u0438\u0020API.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlValidAnimeIds"
         },                {
-            "fqsen": "\\AniMik\\MalCrawler\\Facades\\AnimeCrawler\u003A\u003AcrawlAnimeEpisodesList\u0028\u0029",
+            "fqsen": "\\AniMik\\MalCrawler\\Facades\\Translator\u003A\u003AcrawlAnimeEpisodesList\u0028\u0029",
             "name": "crawlAnimeEpisodesList",
             "summary": "\u042D\u0442\u043E\u0442\u0020\u043C\u0435\u0442\u043E\u0434\u0020\u043F\u0440\u0438\u043D\u0438\u043C\u0430\u0435\u0442\u0020MAL\u0020ID\u0020\u0028\u0443\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u044B\u0439\u0020\u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440\u0020\u0430\u043D\u0438\u043C\u0435\u0020\u043D\u0430\u0020MyAnimeList\u0029,\u0020\u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u0442\u0020HTTP\u002D\u0437\u0430\u043F\u0440\u043E\u0441\u0020\u043D\u0430\u0020\u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443\u0020\u0441\u043F\u0438\u0441\u043A\u0430\u0020\u044D\u043F\u0438\u0437\u043E\u0434\u043E\u0432\n\u0438\u0020\u0438\u0437\u0432\u043B\u0435\u043A\u0430\u0435\u0442\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E\u0020\u043E\u0020\u043A\u0430\u0436\u0434\u043E\u043C\u0020\u044D\u043F\u0438\u0437\u043E\u0434\u0435.\u0020\u0414\u0430\u043D\u043D\u044B\u0435\u0020\u0432\u043A\u043B\u044E\u0447\u0430\u044E\u0442\u0020\u0442\u0430\u043A\u0438\u0435\u0020\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B,\u0020\u043A\u0430\u043A\u0020\u043D\u043E\u043C\u0435\u0440\u0020\u044D\u043F\u0438\u0437\u043E\u0434\u0430\u0020\u0438\u0020\u0434\u0440\u0443\u0433\u0430\u044F\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F,\u0020\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430\u044F\u0020\u043D\u0430\u0020\u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435.",
             "url": "classes/AniMik-MalCrawler-Facades-AnimeCrawler.html#method_crawlAnimeEpisodesList"

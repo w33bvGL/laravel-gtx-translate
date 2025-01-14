@@ -2,7 +2,7 @@
 
 namespace AniMik\MalCrawler\Tests\Unit;
 
-use AniMik\MalCrawler\Facades\AnimeCrawler;
+use AniMik\MalCrawler\Facades\Translator;
 use AniMik\MalCrawler\Tests\UnitTest;
 
 class CrawlAnimeTest extends UnitTest
@@ -30,7 +30,7 @@ class CrawlAnimeTest extends UnitTest
 
     public function test_it_crawls_anime_max_range(): void
     {
-        $animeRangeResponse = AnimeCrawler::crawlValidAnimeIds();
+        $animeRangeResponse = Translator::crawlValidAnimeIds();
         $animeRange = $this->decodeAndValidateJson($animeRangeResponse);
         $this->saveResponseToFile($animeRange, $this->animeRangeResponseFile);
         $this->assertFileExists($this->animeRangeResponseFile);
@@ -39,7 +39,7 @@ class CrawlAnimeTest extends UnitTest
 
     public function test_it_crawl_anime(): void
     {
-        $animeResponse = AnimeCrawler::crawlAnime(53126);
+        $animeResponse = Translator::crawlAnime(53126);
         $anime = $this->decodeAndValidateJson($animeResponse);
         $this->saveResponseToFile($anime, $this->animeResponseFile);
         $this->assertFileExists($this->animeResponseFile);
@@ -48,7 +48,7 @@ class CrawlAnimeTest extends UnitTest
 
     public function test_it_crawl_anime_characters_and_staff(): void
     {
-        $animeCharactersAndStaffResponse = AnimeCrawler::crawlAnimeCharactersAndStaff(48736);
+        $animeCharactersAndStaffResponse = Translator::crawlAnimeCharactersAndStaff(48736);
         $animeCharactersAndStaff = $this->decodeAndValidateJson($animeCharactersAndStaffResponse);
         $this->saveResponseToFile($animeCharactersAndStaff, $this->animeCharactersAndStaffResponseFile);
         $this->assertFileExists($this->animeCharactersAndStaffResponseFile);
@@ -57,7 +57,7 @@ class CrawlAnimeTest extends UnitTest
 
     public function test_it_crawl_anime_episodes_list(): void
     {
-        $animeAnimeEpisodesListResponse = AnimeCrawler::crawlAnimeEpisodesList(48736);
+        $animeAnimeEpisodesListResponse = Translator::crawlAnimeEpisodesList(48736);
         $animeEpisodesList = $this->decodeAndValidateJson($animeAnimeEpisodesListResponse);
         $this->saveResponseToFile($animeEpisodesList, $this->animeEpisodesListResponseFile);
         $this->assertFileExists($this->animeEpisodesListResponseFile);

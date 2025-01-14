@@ -23,11 +23,11 @@ use Illuminate\Support\Facades\Facade;
  * any application that needs to process or display anime-related information.
  *
  * Example usage:
- * - `AnimeCrawler::crawlGenres()`
- * - `AnimeCrawler::crawlAnime(12345)`
- * - `AnimeCrawler::crawlValidAnimeIds()`
+ * - `Translator::crawlGenres()`
+ * - `Translator::crawlAnime(12345)`
+ * - `Translator::crawlValidAnimeIds()`
  */
-class AnimeCrawler extends Facade
+class Translator extends Facade
 {
     /**
      * Получает фасад для доступа к сервису аниме.
@@ -49,7 +49,7 @@ class AnimeCrawler extends Facade
      * The result is returned as a JSON response.
      *
      *  Example usage:
-     *  - `AnimeCrawler::crawlGenres()`
+     *  - `Translator::crawlGenres()`
      */
     public static function crawlGenres(): JsonResponse
     {
@@ -64,7 +64,7 @@ class AnimeCrawler extends Facade
      * method and applies filtering for explicit genres.
      *
      *  Example usage:
-     *  - `AnimeCrawler::crawlExplicitGenres()`
+     *  - `Translator::crawlExplicitGenres()`
      */
     public static function crawlExplicitGenres(): JsonResponse
     {
@@ -79,7 +79,7 @@ class AnimeCrawler extends Facade
      * and applies filtering for specific themes.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlThemes()`
+     * - `Translator::crawlThemes()`
      */
     public static function crawlThemes(): JsonResponse
     {
@@ -94,7 +94,7 @@ class AnimeCrawler extends Facade
      * crawling method and filters by demographics.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlDemographics()`
+     * - `Translator::crawlDemographics()`
      */
     public static function crawlDemographics(): JsonResponse
     {
@@ -109,7 +109,7 @@ class AnimeCrawler extends Facade
      * description, explicit genre description, or theme description.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlGenreDescription($malId)`
+     * - `Translator::crawlGenreDescription($malId)`
      */
     public static function crawlGenreDescription(int $malId): JsonResponse
     {
@@ -125,7 +125,7 @@ class AnimeCrawler extends Facade
      * The result is returned as a JSON response.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlStudios()`
+     * - `Translator::crawlStudios()`
      */
     public static function crawlStudios(): JsonResponse
     {
@@ -140,7 +140,7 @@ class AnimeCrawler extends Facade
      * about a studio by its unique identifier.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlStudioInformation($malId)`
+     * - `Translator::crawlStudioInformation($malId)`
      */
     public static function crawlStudioInformation(int $malId): JsonResponse
     {
@@ -156,7 +156,7 @@ class AnimeCrawler extends Facade
      * the popularity or performance of anime series or movies.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlRankings()`
+     * - `Translator::crawlRankings()`
      */
     public static function crawlRankings(): JsonResponse
     {
@@ -172,7 +172,7 @@ class AnimeCrawler extends Facade
      * details, such as release years and specific characteristics.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlSeasons()`
+     * - `Translator::crawlSeasons()`
      */
     public static function crawlSeasons(): JsonResponse
     {
@@ -187,7 +187,7 @@ class AnimeCrawler extends Facade
      * by anime type.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlTypes()`
+     * - `Translator::crawlTypes()`
      */
     public static function crawlTypes(): JsonResponse
     {
@@ -202,7 +202,7 @@ class AnimeCrawler extends Facade
      * anime based on its release status.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlStatus()`
+     * - `Translator::crawlStatus()`
      */
     public static function crawlStatus(): JsonResponse
     {
@@ -217,7 +217,7 @@ class AnimeCrawler extends Facade
      * ratings to restrict or recommend certain anime based on the audience's age.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlRated()`
+     * - `Translator::crawlRated()`
      */
     public static function crawlRated(): JsonResponse
     {
@@ -232,7 +232,7 @@ class AnimeCrawler extends Facade
      * like title, rating, studio, release year, and more.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlColumns()`
+     * - `Translator::crawlColumns()`
      */
     public static function crawlColumns(): JsonResponse
     {
@@ -247,7 +247,7 @@ class AnimeCrawler extends Facade
      * This method retrieves comprehensive data about the anime.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlAnime($malId)`
+     * - `Translator::crawlAnime($malId)`
      */
     public static function crawlAnime(int $malId): JsonResponse
     {
@@ -262,7 +262,7 @@ class AnimeCrawler extends Facade
      * This method retrieves detailed data about characters and staff for the given anime.
      *
      * Example usage:
-     *  - `AnimeCrawler::crawlAnimeCharactersAndStaff($malId)`
+     *  - `Translator::crawlAnimeCharactersAndStaff($malId)`
      */
     public static function crawlAnimeCharactersAndStaff(int $malId): JsonResponse
     {
@@ -279,7 +279,7 @@ class AnimeCrawler extends Facade
      * about each anime.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlValidAnimeIds()`
+     * - `Translator::crawlValidAnimeIds()`
      */
     public static function crawlValidAnimeIds(): JsonResponse
     {
@@ -294,7 +294,7 @@ class AnimeCrawler extends Facade
      * and extracts information about each episode. The data includes elements such as the episode number and other available details from the page.
      *
      * Example usage:
-     * - `AnimeCrawler::crawlAnimeEpisodesList($malId)`
+     * - `Translator::crawlAnimeEpisodesList($malId)`
      */
     public static function crawlAnimeEpisodesList(int $malId): JsonResponse
     {
