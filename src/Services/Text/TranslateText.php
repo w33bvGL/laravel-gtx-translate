@@ -8,7 +8,6 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class TranslateText extends BaseService
 {
-
     /**
      * Получить студии с указанного URL
      *

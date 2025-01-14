@@ -2,7 +2,6 @@
 
 namespace AniMik\MalCrawler\Providers;
 
-use AniMik\MalCrawler\Services\Anime\CrawlAnime;
 use Illuminate\Support\ServiceProvider;
 
 class MalCrawlerServiceProvider extends ServiceProvider
@@ -22,7 +21,7 @@ class MalCrawlerServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/mal-crawler.php', 'malCrawler'
+            __DIR__.'/../../config/mal-crawler.php', 'malCrawler'
         );
     }
 
@@ -34,7 +33,7 @@ class MalCrawlerServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../../config/mal-crawler.php' => config_path('mal-crawler.php'),
+            __DIR__.'/../../config/mal-crawler.php' => config_path('mal-crawler.php'),
         ]);
     }
 }
