@@ -1051,16 +1051,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.52.18",
+            "version": "v9.52.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7"
+                "reference": "0d244f0e7ef871b6d4efcacb396e155e6a13912c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7",
-                "reference": "41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0d244f0e7ef871b6d4efcacb396e155e6a13912c",
+                "reference": "0d244f0e7ef871b6d4efcacb396e155e6a13912c",
                 "shasum": ""
             },
             "require": {
@@ -1245,7 +1245,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-11-20T15:56:00+00:00"
+            "time": "2025-01-21T16:07:36+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2908,16 +2908,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.18.0",
+            "version": "1.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "8332205b90d17164913244f4a8e13ab7e6761d29"
+                "reference": "ba67eee37d86ed775dab7dad58a7cbaf9a6cfe78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/8332205b90d17164913244f4a8e13ab7e6761d29",
-                "reference": "8332205b90d17164913244f4a8e13ab7e6761d29",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/ba67eee37d86ed775dab7dad58a7cbaf9a6cfe78",
+                "reference": "ba67eee37d86ed775dab7dad58a7cbaf9a6cfe78",
                 "shasum": ""
             },
             "require": {
@@ -2956,7 +2956,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.18.0"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.18.3"
             },
             "funding": [
                 {
@@ -2964,7 +2964,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-30T13:13:39+00:00"
+            "time": "2025-01-22T08:51:18+00:00"
         },
         {
             "name": "symfony/browser-kit",
