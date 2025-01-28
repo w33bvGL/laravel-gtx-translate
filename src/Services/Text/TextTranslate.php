@@ -27,7 +27,6 @@ class TextTranslate extends BaseService
             return response()->json([]);
         }
 
-
         $crawler = new Crawler($content);
 
         $this->saveHtmlToFile($content);
