@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AniMik\MalCrawler\Services\Text;
 
 use AniMik\MalCrawler\Services\BaseService;
@@ -41,9 +43,9 @@ class TranslateText extends BaseService
      */
     public function crawlStudioInformation(int $malId): JsonResponse
     {
-        $baseUrl = config('malCrawler.base_url');
+        $baseUrl   = config('malCrawler.base_url');
         $genresUrl = config('malCrawler.studio_url');
-        $url = $baseUrl.$genresUrl.'/'.$malId;
+        $url       = $baseUrl.$genresUrl.'/'.$malId;
 
         $content = $this->handleHttpRequestErrors($this->httpClient, $url);
 

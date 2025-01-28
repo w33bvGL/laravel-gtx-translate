@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AniMik\MalCrawler\Traits;
 
 trait HasSlugTrait
