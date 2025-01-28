@@ -27,16 +27,29 @@ class TextTranslate extends BaseService
             return response()->json([]);
         }
 
+
         $crawler = new Crawler($content);
 
+        $this->saveHtmlToFile($content);
+
+        dd($crawler);
         $parsedText = $crawler->filter('span[jsname="W297wb"]')->each(function (Crawler $node) {
             $translatedText = $node->text();
+            dd($translatedText);
             $this->logger->info("Translated text: {$translatedText}");
         });
 
         return response()->json([
-            'status' => 'success',
+            'status' => 'sex',
             'data' => $parsedText,
         ]);
+    }
+
+    private function saveHtmlToFile(string $htmlContent): void
+    {
+        $filePath = 'index.html';
+
+        file_put_contents($filePath, $htmlContent);
+
     }
 }
