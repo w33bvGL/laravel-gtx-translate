@@ -31,7 +31,8 @@
     "phpunit/phpunit": "^9.6",
     "phpstan/phpstan": "^2.1",
     "orchestra/testbench": "^7.50",
-    "laravel/pint": "^1.19"
+    "laravel/pint": "^1.19",
+    "monolog/monolog": "^2.10"
   },
   "scripts": {
     "post-autoload-dump": [
