@@ -13,7 +13,7 @@ class TextTranslationTest extends UnitTest
     {
         $this->logger->info('Calling the text translation service...');
 
-        $result = TextTranslator::textTranslate();
+        $result = TextTranslator::translate('ru', 'hy', 'привет');
 
         $this->logger->info('Translation result: '.$result);
 

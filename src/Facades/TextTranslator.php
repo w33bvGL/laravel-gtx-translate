@@ -14,8 +14,8 @@ class TextTranslator extends Facade
         return 'translate';
     }
 
-    public static function textTranslate(): JsonResponse
+    public static function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {
-        return app('translate')['text']->ScrapeText();
+        return app('translate')['text']->translate($sourceLanguage, $targetLanguage, $text);
     }
 }
