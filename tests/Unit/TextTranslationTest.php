@@ -9,7 +9,7 @@ use Anidzen\GoogleTranslateScraper\Tests\UnitTest;
 
 class TextTranslationTest extends UnitTest
 {
-    public function text_it_text_translate(): void
+    public function test_it_text_translate(): void
     {
         TextTranslator::textTranslate();
     }

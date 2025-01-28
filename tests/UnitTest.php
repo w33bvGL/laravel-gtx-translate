@@ -6,37 +6,24 @@ namespace Anidzen\GoogleTranslateScraper\Tests;
 
 use Anidzen\GoogleTranslateScraper\Facades\TextTranslator;
 use Anidzen\GoogleTranslateScraper\Providers\GoogleTranslateScraperServiceProvider;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 use Orchestra\Testbench\TestCase;
 
 class UnitTest extends TestCase
 {
-    protected string $mainLogFile;
+    protected Logger $logger;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->mainLogFile = $this->generateLogFilePath();
+        // Создание экземпляра Monolog
+        $this->logger = new Logger('test_logger');
+        $this->logger->pushHandler(new StreamHandler(__DIR__.'/../storage/Logs/test.log', Logger::DEBUG));
 
-        $directory = dirname($this->mainLogFile);
-        if (! is_dir($directory)) {
-            mkdir($directory, 0777, true);
-        }
-
-        file_put_contents($this->mainLogFile, 'Log file created at: '.date('Y-m-d H:i:s').PHP_EOL);
-    }
-
-    protected function generateLogFilePath(): string
-    {
-        $timestamp = date('Y-m-d_H');
-
-        return __DIR__."/../storage/Logs/malCrawler_{$timestamp}.log";
-    }
-
-    protected function logMessage(string $message): void
-    {
-        $logMessage = date('Y-m-d H:i:s').' - '.$message.PHP_EOL;
-        file_put_contents($this->mainLogFile, $logMessage, FILE_APPEND);
+        // Логируем сообщение
+        $this->logger->info('Test setup initialized at: '.now());
     }
 
     protected function getPackageProviders($app): array
@@ -64,10 +51,7 @@ class UnitTest extends TestCase
 
     protected function saveResponseToFile($data, $filePath): void
     {
-        if (! file_exists($filePath)) {
-            $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-            file_put_contents($filePath, $json);
-        }
+        $this->logger->info('Saving response data to: '.$filePath);
 
         $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         file_put_contents($filePath, $json);
