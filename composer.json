@@ -35,15 +35,14 @@
   },
   "scripts": {
     "post-autoload-dump": [
-      "./vendor/bin/pint ."
+      "./vendor/bin/pint .",
+      "./vendor/bin/phpstan analyse --memory-limit=512M"
     ],
     "pint": [
       "./vendor/bin/pint ."
     ],
-    "ide-helper:all": [
-      "php artisan ide-helper:generate",
-      "php artisan ide-helper:models --nowrite",
-      "php artisan ide-helper:meta"
+    "analyse": [
+      "./vendor/bin/phpstan analyse --configuration=.phpstan.neon --memory-limit=512M"
     ]
   },
   "extra": {

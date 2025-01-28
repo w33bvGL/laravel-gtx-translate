@@ -17,6 +17,7 @@ services:
                    composer install &&
                    ./vendor/bin/phpunit tests &&
                    ./vendor/bin/pint &&
+                   ./vendor/bin/phpstan analyse --configuration=.phpstan.neon --memory-limit=512M &&
                    tail -f /dev/null"
         volumes:
             - .:/data
