@@ -11,6 +11,10 @@ class TextTranslationTest extends UnitTest
 {
     public function test_it_text_translate(): void
     {
-        TextTranslator::textTranslate();
+        $this->logger->info('Calling the text translation service...');
+
+        $result = TextTranslator::textTranslate();
+
+        $this->logger->info('Translation result: '.$result);
     }
 }
