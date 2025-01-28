@@ -16,5 +16,7 @@ class TextTranslationTest extends UnitTest
         $result = TextTranslator::textTranslate();
 
         $this->logger->info('Translation result: '.$result);
+
+        $this->assertNotEmpty($result, 'Translation result should not be empty');
     }
 }
