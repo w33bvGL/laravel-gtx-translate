@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AniMik\MalCrawler\Facades;
+namespace Anidzen\GoogleTranslateScraper\Facades;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Facade;
@@ -30,10 +30,6 @@ class TextTranslator extends Facade
     }
 
     /**
-     * Краулит жанры аниме с MyAnimeList.
-     * Этот метод извлекает все жанры аниме с MyAnimeList.
-     * Результат возвращается в виде JSON-ответа.
-     *
      * Crawls anime genres from MyAnimeList.
      * This method retrieves all anime genres from MyAnimeList.
      * The result is returned as a JSON response.
