@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Services;
 
-use AniMik\MalCrawler\Traits\HasDecodeUnicode;
-use AniMik\MalCrawler\Traits\HasHandleHttpRequestErrors;
-use AniMik\MalCrawler\Traits\HasSlugTrait;
+use Anidzen\GoogleTranslateScraper\Traits\HasDecodeUnicode;
+use Anidzen\GoogleTranslateScraper\Traits\HasHandleHttpRequestErrors;
+use Anidzen\GoogleTranslateScraper\Traits\HasSlugTrait;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 

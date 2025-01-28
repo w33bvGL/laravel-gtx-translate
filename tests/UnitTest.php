@@ -2,19 +2,14 @@
 
 declare(strict_types=1);
 
-namespace AniMik\MalCrawler\Tests;
+namespace Anidzen\GoogleTranslateScraper\Tests;
 
-use AniMik\MalCrawler\Providers\GoogleTranslateScraperServiceProvider;
+use Anidzen\GoogleTranslateScraper\Facades\TextTranslator;
+use Anidzen\GoogleTranslateScraper\Providers\GoogleTranslateScraperServiceProvider;
 use Orchestra\Testbench\TestCase;
 
-/**
- * @doesNotPerformAssertions
- */
 class UnitTest extends TestCase
 {
-    /**
-     * Common log file for all tests.
-     */
     protected string $mainLogFile;
 
     protected function setUp(): void
@@ -31,9 +26,6 @@ class UnitTest extends TestCase
         file_put_contents($this->mainLogFile, 'Log file created at: '.date('Y-m-d H:i:s').PHP_EOL);
     }
 
-    /**
-     * Generate a path for a log file with a unique name
-     */
     protected function generateLogFilePath(): string
     {
         $timestamp = date('Y-m-d_H');
@@ -41,9 +33,6 @@ class UnitTest extends TestCase
         return __DIR__."/../storage/Logs/malCrawler_{$timestamp}.log";
     }
 
-    /**
-     * Log messages to a common log file.
-     */
     protected function logMessage(string $message): void
     {
         $logMessage = date('Y-m-d H:i:s').' - '.$message.PHP_EOL;
@@ -60,19 +49,10 @@ class UnitTest extends TestCase
     protected function getPackageAliases($app): array
     {
         return [
-            'MalCrawler' => \AniMik\MalCrawler\Facades\MalCrawler::class,
+            'GoogleTranslateScraper' => TextTranslator::class,
         ];
     }
 
-    public function test_example()
-    {
-        $this->logMessage('Test message');
-        $this->assertTrue(true);
-    }
-
-    /**
-     * Decodes and validates the JSON response.
-     */
     protected function decodeAndValidateJson($response)
     {
         $decodedJson = json_decode($response->getContent(), true);
@@ -82,9 +62,6 @@ class UnitTest extends TestCase
         return $decodedJson;
     }
 
-    /**
-     * Saves data to a file in JSON format.
-     */
     protected function saveResponseToFile($data, $filePath): void
     {
         if (! file_exists($filePath)) {

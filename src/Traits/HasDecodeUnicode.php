@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AniMik\MalCrawler\Traits;
+namespace Anidzen\GoogleTranslateScraper\Traits;
 
 trait HasDecodeUnicode
 {
