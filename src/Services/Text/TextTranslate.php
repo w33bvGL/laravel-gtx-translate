@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace AniMik\MalCrawler\Services\Text;
+namespace Anidzen\GoogleTranslateScraper\Services\Text;
 
-use AniMik\MalCrawler\Services\BaseService;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\DomCrawler\Crawler;
 
-class TranslateText extends BaseService
+class TextTranslate extends BaseService
 {
     /**
      * Получить студии с указанного URL

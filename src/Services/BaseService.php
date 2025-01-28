@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AniMik\MalCrawler\Services;
+namespace Anidzen\GoogleTranslateScraper\Services;
 
 use AniMik\MalCrawler\Traits\HasDecodeUnicode;
 use AniMik\MalCrawler\Traits\HasHandleHttpRequestErrors;
