@@ -1,14 +1,11 @@
 <?php
 
-namespace AniMik\MalCrawler\Traits;
+declare(strict_types=1);
+
+namespace Anidzen\GoogleTranslateScraper\Traits;
 
 trait HasSlugTrait
 {
-    /**
-     * Генерирует слуг (переводит в нижний регистр, заменяет пробелы на дефисы).
-     *
-     * Converts the string to lowercase and replaces spaces/underscores with hyphens.
-     */
     protected function generateSlug(string $slug): string
     {
 

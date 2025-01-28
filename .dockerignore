@@ -1,4 +1,15 @@
 .git
-vendor
 .github
+
+node_modules
+vendor
+
 docs
+
+docker-compose.dev.yml
+docker-compose.prod.yml
+.editorconfig
+.gitignore
+LICENSE
+README.md
+SECURITY.md

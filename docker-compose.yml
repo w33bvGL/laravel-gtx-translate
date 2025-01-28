@@ -1,6 +1,6 @@
 services:
     phpdoc:
-        container_name: mal-crawler-docs
+        container_name: google-translate-scraper-docs
         build: .
         command: >
             sh -c "phpdoc &&
@@ -10,13 +10,14 @@ services:
         volumes:
             - .:/data
     app:
-        container_name: mal-crawler
+        container_name: google-translate-scraper
         build: .
         command: >
             sh -c "git config --global --add safe.directory /data &&
                    composer install &&
                    ./vendor/bin/phpunit tests &&
                    ./vendor/bin/pint &&
+                   ./vendor/bin/phpstan analyse --configuration=.phpstan.neon --memory-limit=512M &&
                    tail -f /dev/null"
         volumes:
             - .:/data

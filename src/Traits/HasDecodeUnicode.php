@@ -1,14 +1,11 @@
 <?php
 
-namespace AniMik\MalCrawler\Traits;
+declare(strict_types=1);
+
+namespace Anidzen\GoogleTranslateScraper\Traits;
 
 trait HasDecodeUnicode
 {
-    /**
-     * Декодирует строку, экранированную в Unicode.
-     *
-     * Decodes a Unicode-escaped string.
-     */
     protected function decodeUnicode(string $str): string
     {
         return json_decode('"'.$str.'"');

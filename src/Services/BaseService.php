@@ -1,10 +1,12 @@
 <?php
 
-namespace AniMik\MalCrawler\Services;
+declare(strict_types=1);
 
-use AniMik\MalCrawler\Traits\HasDecodeUnicode;
-use AniMik\MalCrawler\Traits\HasHandleHttpRequestErrors;
-use AniMik\MalCrawler\Traits\HasSlugTrait;
+namespace Anidzen\GoogleTranslateScraper\Services;
+
+use Anidzen\GoogleTranslateScraper\Traits\HasDecodeUnicode;
+use Anidzen\GoogleTranslateScraper\Traits\HasHandleHttpRequestErrors;
+use Anidzen\GoogleTranslateScraper\Traits\HasSlugTrait;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
