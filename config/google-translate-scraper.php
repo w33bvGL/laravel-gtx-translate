@@ -11,8 +11,8 @@ return [
     |
     | The base URL for accessing the main resource. By default, this points to
     | MyAnimeList. You can override this value in the .env file by setting the
-    | MAL_CRAWLER_BASE_URL parameter.
+    | GOOGLE_TRANSLATE_SCRAPER_BASE_URL parameter.
     |
     */
-    'base_url' => env('MAL_CRAWLER_BASE_URL', 'https://myanimelist.net'),
+    'base_url' => env('GOOGLE_TRANSLATE_SCRAPER_BASE_URL', 'https://translate.google.com'),
 ];
