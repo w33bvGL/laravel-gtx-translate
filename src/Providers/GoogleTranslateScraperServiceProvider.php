@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AniMik\MalCrawler\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class MalCrawlerServiceProvider extends ServiceProvider
+class GoogleTranslateScraperServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
@@ -21,7 +23,7 @@ class MalCrawlerServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/mal-crawler.php', 'malCrawler'
+            __DIR__.'/../../config/google-translate-scraper.php', 'translateScraper'
         );
     }
 
@@ -33,7 +35,7 @@ class MalCrawlerServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../../config/mal-crawler.php' => config_path('mal-crawler.php'),
+            __DIR__.'/../../config/google-translate-scraper.php' => config_path('google-translate-scraper.php'),
         ]);
     }
 }

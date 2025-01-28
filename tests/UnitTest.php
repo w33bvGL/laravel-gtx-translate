@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AniMik\MalCrawler\Tests;
 
-use AniMik\MalCrawler\Providers\MalCrawlerServiceProvider;
+use AniMik\MalCrawler\Providers\GoogleTranslateScraperServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 /**
@@ -51,7 +53,7 @@ class UnitTest extends TestCase
     protected function getPackageProviders($app): array
     {
         return [
-            MalCrawlerServiceProvider::class,
+            GoogleTranslateScraperServiceProvider::class,
         ];
     }
 
