@@ -32,4 +32,21 @@ return [
     |
     */
     'proxy' => env('GOOGLE_TRANSLATE_SCRAPER_PROXY', null),
+
+    /*
+    |----------------------------------------------------------------------
+    | Supported Languages
+    |----------------------------------------------------------------------
+    |
+    | List of supported languages by the Google Translate Scraper.
+    |
+    */
+    'supported_languages' => [
+        'Armenian' => 'hy',
+        'Chinese (Traditional)' => 'zh-TW',
+        'Chinese (Simplified)' => 'zh-CN',
+        'Japanese' => 'ja',
+        'English' => 'en',
+        'Russian' => 'ru',
+    ],
 ];

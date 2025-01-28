@@ -37,8 +37,8 @@ class TextTranslator extends Facade
      *  Example usage:
      *  - `TextTranslator::crawlGenres()`
      */
-    public static function crawlGenres(): JsonResponse
+    public static function textTranslate(): JsonResponse
     {
-        return app('anime')['genres']->crawlGenres();
+        return app('translate')['text']->crawlGenres();
     }
 }
