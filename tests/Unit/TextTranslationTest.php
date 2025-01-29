@@ -13,10 +13,13 @@ class TextTranslationTest extends UnitTest
     {
         $this->logger->info('Calling the text translation service...');
 
-        $result = TextTranslator::translate('ru', 'hy', 'привет');
+        $result = TextTranslator::translate('ru', 'ja', 'привет как дела?');
 
-        $this->logger->info('Translation result: '.$result);
+        $data  = json_decode($result->getContent(), true, 512, JSON_UNESCAPED_UNICODE);
 
-        $this->assertNotEmpty($result, 'Translation result should not be empty');
+        $this->logger->info(json_encode($data, JSON_UNESCAPED_UNICODE));
+
+        $this->assertNotEmpty($result->getContent(), 'Translation result should not be empty');
+
     }
 }
