@@ -50,10 +50,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "GoogleTranslateScraperServiceProvider"
+        "Anidzen\\GoogleTranslateScraper\\Providers\\GoogleTranslateScraperServiceProvider"
       ],
       "aliases": {
-        "TextTranslator": "TextTranslator"
+        "TextTranslator": "Anidzen\\GoogleTranslateScraper\\Facades\\TextTranslator"
       }
     },
     "funding": {
