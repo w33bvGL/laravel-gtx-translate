@@ -3,7 +3,7 @@
   "exclude": ["storage/**", "vendor/**", "node_modules/**", ".docker/**", ".git/**", ".github/**"],
   "rules": {
     "declare_strict_types": true,
-    "phpdoc_align": true,
+    "phpdoc_align": false,
     "phpdoc_types": true,
     "no_empty_phpdoc": true,
     "binary_operator_spaces": {

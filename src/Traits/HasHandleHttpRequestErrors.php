@@ -12,10 +12,13 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 trait HasHandleHttpRequestErrors
 {
-    protected function handleHttpRequestErrors(HttpClientInterface $httpClient, string $url): ?string
+    protected function handleHttpRequestErrors(HttpClientInterface $httpClient, string $url, array $options): ?string
     {
         try {
-            $response = $httpClient->request('GET', $url);
+            $response = $httpClient->request('GET', $url, [
+                'headers' => $options['headers'] ?? [],
+                'proxy' => $options['proxy'] ?? null,
+            ]);
 
             return $response->getContent();
         } catch (ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface|TransportExceptionInterface $e) {
