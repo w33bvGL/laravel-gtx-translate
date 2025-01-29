@@ -1,3 +1,9 @@
+[README на русском](README_RU.md) /
+[Հայերեն README](README_HY.md)
+
+![Version](https://img.shields.io/github/tag/<user>/<repo>?label=Version&color=blue)
+![Views](https://img.shields.io/github/watchers/<user>/<repo>?style=social)
+
 # Google-Translate-Scraper
 
 **Google-Translate-Scraper** is a PHP Laravel library designed to scrape Google Translate to translate text between different languages. It provides a simple interface for performing translations.
