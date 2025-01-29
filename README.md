@@ -6,6 +6,9 @@
 
 # Google-Translate-Scraper
 
+- [🇷🇺 README на русском](README_RU.md)
+- [🇬🇪 Հայերեն README](README_HY.md)
+
 **Google-Translate-Scraper** is a PHP Laravel library designed to scrape Google Translate to translate text between different languages. It provides a simple interface for performing translations.
 
 This package allows you to translate text from one language to another by scraping Google Translate. It handles tasks such as setting request timeouts, proxies, and supporting multiple languages. It is a solution for developers who want an offline translation tool without having to pay for API keys or rely on third-party services.
