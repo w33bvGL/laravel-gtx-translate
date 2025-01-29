@@ -17,6 +17,9 @@ abstract class BaseService
 
     protected HttpClientInterface $httpClient;
 
+    /**
+     * @internal
+     */
     public function __construct()
     {
         $this->httpClient = HttpClient::create();

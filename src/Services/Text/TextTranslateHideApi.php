@@ -10,6 +10,9 @@ use Illuminate\Http\JsonResponse;
 
 class TextTranslateHideApi extends BaseService
 {
+    /**
+     * @internal
+     */
     private function generateUrl(string $sourceLanguage, string $targetLanguage, string $text): string
     {
         $encodedText = urlencode($text);
@@ -66,6 +69,9 @@ class TextTranslateHideApi extends BaseService
         }
     }
 
+    /**
+     * @internal
+     */
     private function validateInput(string $sourceLanguage, string $targetLanguage, string $text): ?array
     {
         $textMaxLength = config('googleTranslateScraper.text_max_length');
@@ -98,6 +104,9 @@ class TextTranslateHideApi extends BaseService
         return null;
     }
 
+    /**
+     * @internal
+     */
     private function getRandomUserAgentHeader(): array
     {
         $userAgents = config('googleTranslateScraper.user_agents');
