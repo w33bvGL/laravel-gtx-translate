@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Services\Text;
 
+use Anidzen\GoogleTranslateScraper\Exceptions\TextTranslationException;
 use Anidzen\GoogleTranslateScraper\Services\BaseService;
 use Illuminate\Http\JsonResponse;
-use Anidzen\GoogleTranslateScraper\Exceptions\TextTranslationException; // Подключаем исключение
 
 class TextTranslateHideApi extends BaseService
 {
@@ -17,12 +17,6 @@ class TextTranslateHideApi extends BaseService
         return config('googleTranslateScraper.hidden_api_base_url')."/translate_a/single?client=gtx&sl={$sourceLanguage}&tl={$targetLanguage}&dt=t&q={$encodedText}";
     }
 
-    /**
-     * @param string $sourceLanguage
-     * @param string $targetLanguage
-     * @param string $text
-     * @return JsonResponse
-     */
     public function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {
         try {
