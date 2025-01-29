@@ -72,34 +72,36 @@ class TextTranslateHideApi extends BaseService
         }
     }
 
-    private function validateInput(string $sourceLanguage, string $targetLanguage, string $text): void
+    private function validateInput(string $sourceLanguage, string $targetLanguage, string $text): ?array
     {
         $textMaxLength = config('googleTranslateScraper.text_max_length');
         $textLength    = strlen($text);
 
         if (empty($text)) {
-            throw new \InvalidArgumentException('Text cannot be empty.');
+            return ['status' => 'error', 'message' => 'Text cannot be empty.'];
         }
 
         if (empty($sourceLanguage) || empty($targetLanguage)) {
-            throw new \InvalidArgumentException('Source and target languages are required.');
+            return ['status' => 'error', 'message' => 'Source and target languages are required.'];
         }
 
         if ($textLength > $textMaxLength) {
-            throw new \InvalidArgumentException("Text cannot be longer than '{$textMaxLength}' characters. Your text length '{$textLength}' characters.");
+            return ['status' => 'error', 'message' => "Text cannot be longer than '{$textMaxLength}' characters. Your text length '{$textLength}' characters."];
         }
 
         if ($sourceLanguage === $targetLanguage) {
-            throw new \InvalidArgumentException('Source language and target language cannot be the same.');
+            return ['status' => 'error', 'message' => 'Source language and target language cannot be the same.'];
         }
 
         if (! $this->isSupportedLanguage($sourceLanguage)) {
-            throw new \InvalidArgumentException("Source language '{$sourceLanguage}' is not supported.");
+            return ['status' => 'error', 'message' => "Source language '{$sourceLanguage}' is not supported."];
         }
 
         if (! $this->isSupportedLanguage($targetLanguage)) {
-            throw new \InvalidArgumentException("Target language '{$targetLanguage}' is not supported.");
+            return ['status' => 'error', 'message' => "Target language '{$targetLanguage}' is not supported."];
         }
+
+        return null;
     }
 
     private function getRandomUserAgentHeader(): array
