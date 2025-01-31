@@ -20,6 +20,21 @@ class TextTranslateHideApi extends BaseService
         return config('googleTranslateScraper.hidden_api_base_url')."/translate_a/single?client=gtx&sl={$sourceLanguage}&tl={$targetLanguage}&dt=t&q={$encodedText}";
     }
 
+    public function extractTranslations(array $responseData): array
+    {
+        $translations = [];
+
+        if (isset($responseData[0]) && is_array($responseData[0])) {
+            foreach ($responseData[0] as $translationItem) {
+                if (isset($translationItem[0])) {
+                    $translations[] = $translationItem[0];
+                }
+            }
+        }
+
+        return $translations;
+    }
+
     public function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {
         try {
@@ -53,13 +68,14 @@ class TextTranslateHideApi extends BaseService
                 throw new TextTranslationException('Translation failed: Invalid response format.');
             }
 
-            $translatedText = implode('', array_column($data[0], 0));
+            $translatedText = trim(implode(' ', array_column($data[0], 0)));
+            $translations = $this->extractTranslations($data);
 
             return response()->json([
                 'status' => 'success',
                 'sourceLanguage' => $sourceLanguage,
                 'targetLanguage' => $targetLanguage,
-                'data' => $this->decodeUnicode($translatedText),
+                'data' => implode($translations),
             ], JSON_UNESCAPED_UNICODE);
 
         } catch (TextTranslationException $e) {
