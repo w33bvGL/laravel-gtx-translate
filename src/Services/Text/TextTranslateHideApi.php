@@ -75,7 +75,7 @@ class TextTranslateHideApi extends BaseService
                 'status' => 'success',
                 'sourceLanguage' => $sourceLanguage,
                 'targetLanguage' => $targetLanguage,
-                'data' => implode($translations),
+                'data' => $this->decodeUnicode(implode($translations)),
             ], JSON_UNESCAPED_UNICODE);
 
         } catch (TextTranslationException $e) {
