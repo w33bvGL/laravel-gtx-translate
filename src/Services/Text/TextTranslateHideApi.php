@@ -69,7 +69,7 @@ class TextTranslateHideApi extends BaseService
             }
 
             $translatedText = trim(implode(' ', array_column($data[0], 0)));
-            $translations = $this->extractTranslations($data);
+            $translations   = $this->extractTranslations($data);
 
             return response()->json([
                 'status' => 'success',
