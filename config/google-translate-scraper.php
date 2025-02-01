@@ -54,7 +54,7 @@ return [
     | the size of text that can be processed by the translation API.
     |
     */
-    'text_max_length' => env('GOOGLE_TRANSLATE_SCRAPER_TEXT_MAX_LENGTH', 20000),
+    'text_max_length' => env('GOOGLE_TRANSLATE_SCRAPER_TEXT_MAX_LENGTH', 4000),
 
     /*
     |----------------------------------------------------------------------
