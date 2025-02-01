@@ -13,7 +13,7 @@ class TextTranslationTest extends UnitTest
     {
         $this->logger->info('Calling the text translation service...');
 
-        $result = TextTranslator::translate('ru', 'ww', 'привет как дела?');
+        $result = TextTranslator::translate('ru', 'hy', 'привет как дела?');
 
         $data  = json_decode($result->getContent(), true, 512, JSON_UNESCAPED_UNICODE);
 

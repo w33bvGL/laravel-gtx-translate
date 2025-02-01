@@ -5,6 +5,7 @@ node_modules
 vendor
 
 docs
+.phpdoc
 
 docker-compose.dev.yml
 docker-compose.prod.yml
