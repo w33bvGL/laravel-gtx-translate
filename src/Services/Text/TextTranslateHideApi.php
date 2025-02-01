@@ -58,9 +58,7 @@ class TextTranslateHideApi extends BaseService
 
             $response = $this->handleHttpRequestErrors($this->httpClient, $url, $options);
 
-            if (! $response) {
-                throw new TextTranslationException('Translation failed: No response from API.');
-            }
+
 
             $data = json_decode($response, true);
             if (! isset($data[0]) || ! is_array($data[0])) {
