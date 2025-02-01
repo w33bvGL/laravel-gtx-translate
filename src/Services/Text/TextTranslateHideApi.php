@@ -84,6 +84,7 @@ class TextTranslateHideApi extends BaseService
             return response()->json(['status' => 'error', 'message' => 'An unexpected error occurred.']);
         }
     }
+
     private function validateInput(string $sourceLanguage, string $targetLanguage, string $text): ?array
     {
         $textMaxLength = config('googleTranslateScraper.text_max_length');
