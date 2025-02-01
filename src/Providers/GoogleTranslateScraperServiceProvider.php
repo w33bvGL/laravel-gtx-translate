@@ -9,9 +9,7 @@ use Illuminate\Support\ServiceProvider;
 
 class GoogleTranslateScraperServiceProvider extends ServiceProvider
 {
-    /**
-     * @internal
-     */
+
     public function register(): void
     {
         $this->app->singleton('translate', function () {
@@ -25,9 +23,6 @@ class GoogleTranslateScraperServiceProvider extends ServiceProvider
         );
     }
 
-    /**
-     * @internal
-     */
     public function boot(): void
     {
         $this->publishes([
