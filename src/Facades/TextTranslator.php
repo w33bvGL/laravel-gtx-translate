@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Facades;
 
-use Anidzen\GoogleTranslateScraper\Exceptions\TextTranslationException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Facade;
 
 class TextTranslator extends Facade
 {
-    /**
-     * @internal
-     */
     protected static function getFacadeAccessor(): string
     {
         return 'translate';
@@ -29,8 +25,6 @@ class TextTranslator extends Facade
      * @param string $targetLanguage The target language.
      * @param string $text The text to be translated.
      * @return JsonResponse The translation result in JSON format.
-     *
-     * @throws TextTranslationException If an error occurs during translation, such as a failed request or an invalid server response.
      */
     public static function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Services\Text;
 
-use Anidzen\GoogleTranslateScraper\Exceptions\TextTranslationException;
 use Anidzen\GoogleTranslateScraper\Services\BaseService;
 use Illuminate\Http\JsonResponse;
 
