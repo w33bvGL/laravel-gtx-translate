@@ -38,7 +38,8 @@
   "scripts": {
     "post-autoload-dump": [
       "./vendor/bin/pint .",
-      "./vendor/bin/phpstan analyse --memory-limit=512M"
+      "./vendor/bin/phpstan analyse --memory-limit=512M",
+      "./vendor/bin/phpunit tests"
     ],
     "pint": [
       "./vendor/bin/pint ."
