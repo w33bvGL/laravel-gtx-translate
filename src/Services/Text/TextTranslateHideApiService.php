@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace Anidzen\GoogleTranslateScraper\Services\Text;
 
 use Anidzen\GoogleTranslateScraper\Services\BaseService;
-use Illuminate\Http\JsonResponse;
 use Random\RandomException;
 
-class TextTranslateHideApi extends BaseService
+class TextTranslateHideApiService extends BaseService
 {
     private function generateUrl(string $sourceLanguage, string $targetLanguage, string $text): string
     {
@@ -67,7 +66,8 @@ class TextTranslateHideApi extends BaseService
             'status' => 'success',
             'sourceLanguage' => $sourceLanguage,
             'targetLanguage' => $targetLanguage,
-            'data' => $this->decodeUnicode(implode($translations)),
+            'data' => implode($translations),
+            'translatedText' => $translatedText
         ];
     }
 

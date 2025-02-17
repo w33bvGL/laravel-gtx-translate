@@ -15,6 +15,8 @@ class TextTranslationTest extends UnitTest
 
         $result = TextTranslator::translate('ru', 'hy', 'привет как дела?');
 
+        $this->logger->info(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+
         $this->assertNotEmpty($result, 'Translation result should not be empty');
     }
 }
