@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Facades;
 
-use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Facade;
 
 class TextTranslator extends Facade

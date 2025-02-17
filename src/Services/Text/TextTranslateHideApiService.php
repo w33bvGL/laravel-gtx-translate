@@ -67,7 +67,7 @@ class TextTranslateHideApiService extends BaseService
             'sourceLanguage' => $sourceLanguage,
             'targetLanguage' => $targetLanguage,
             'data' => implode($translations),
-            'translatedText' => $translatedText
+            'translatedText' => $translatedText,
         ];
     }
 
