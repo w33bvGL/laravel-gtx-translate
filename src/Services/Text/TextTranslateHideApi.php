@@ -6,6 +6,7 @@ namespace Anidzen\GoogleTranslateScraper\Services\Text;
 
 use Anidzen\GoogleTranslateScraper\Services\BaseService;
 use Illuminate\Http\JsonResponse;
+use Random\RandomException;
 
 class TextTranslateHideApi extends BaseService
 {
@@ -16,7 +17,7 @@ class TextTranslateHideApi extends BaseService
         return config('googleTranslateScraper.hidden_api_base_url')."/translate_a/single?client=gtx&sl={$sourceLanguage}&tl={$targetLanguage}&dt=t&q={$encodedText}";
     }
 
-    public function extractTranslations(array $responseData): array
+    private function extractTranslations(array $responseData): array
     {
         $translations = [];
 
@@ -31,11 +32,14 @@ class TextTranslateHideApi extends BaseService
         return $translations;
     }
 
-    public function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
+    /**
+     * @throws RandomException
+     */
+    public function translate(string $sourceLanguage, string $targetLanguage, string $text): ?array
     {
         $validationResult = $this->validateInput($sourceLanguage, $targetLanguage, $text);
         if ($validationResult) {
-            return response()->json($validationResult);
+            return $validationResult;
         }
 
         $url = $this->generateUrl($sourceLanguage, $targetLanguage, $text);
@@ -59,12 +63,12 @@ class TextTranslateHideApi extends BaseService
         $translatedText = trim(implode(' ', array_column($data[0], 0)));
         $translations   = $this->extractTranslations($data);
 
-        return response()->json([
+        return [
             'status' => 'success',
             'sourceLanguage' => $sourceLanguage,
             'targetLanguage' => $targetLanguage,
             'data' => $this->decodeUnicode(implode($translations)),
-        ], JSON_UNESCAPED_UNICODE);
+        ];
     }
 
     private function validateInput(string $sourceLanguage, string $targetLanguage, string $text): ?array
