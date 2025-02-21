@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Facades;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Facade;
 
 class TextTranslator extends Facade
@@ -23,9 +24,9 @@ class TextTranslator extends Facade
      * @param string $sourceLanguage The source language.
      * @param string $targetLanguage The target language.
      * @param string $text The text to be translated.
-     * @return ?array The translation result in ?array format.
+     * @return JsonResponse The translation result in ?array format.
      */
-    public static function translate(string $sourceLanguage, string $targetLanguage, string $text): ?array
+    public static function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {
         return app('translate')['text']->translate($sourceLanguage, $targetLanguage, $text);
     }

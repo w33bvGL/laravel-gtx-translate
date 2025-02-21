@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Anidzen\GoogleTranslateScraper\Services\Text;
 
 use Anidzen\GoogleTranslateScraper\Services\BaseService;
+use Illuminate\Http\JsonResponse;
 use Random\RandomException;
 
 class TextTranslateHideApiService extends BaseService
@@ -34,11 +35,11 @@ class TextTranslateHideApiService extends BaseService
     /**
      * @throws RandomException
      */
-    public function translate(string $sourceLanguage, string $targetLanguage, string $text): ?array
+    public function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {
         $validationResult = $this->validateInput($sourceLanguage, $targetLanguage, $text);
         if ($validationResult) {
-            return $validationResult;
+            return response()->json($validationResult);
         }
 
         $url = $this->generateUrl($sourceLanguage, $targetLanguage, $text);
@@ -62,13 +63,13 @@ class TextTranslateHideApiService extends BaseService
         $translatedText = trim(implode(' ', array_column($data[0], 0)));
         $translations   = $this->extractTranslations($data);
 
-        return [
+        return response()->json([
             'status' => 'success',
             'sourceLanguage' => $sourceLanguage,
             'targetLanguage' => $targetLanguage,
             'data' => implode($translations),
             'translatedText' => $translatedText,
-        ];
+        ]);
     }
 
     private function validateInput(string $sourceLanguage, string $targetLanguage, string $text): ?array
