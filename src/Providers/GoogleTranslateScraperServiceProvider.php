@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Anidzen\GoogleTranslateScraper\Providers;
 
-use Anidzen\GoogleTranslateScraper\Services\Text\TextTranslateHideApi;
+use Anidzen\GoogleTranslateScraper\Services\Text\TextTranslateHideApiService;
 use Illuminate\Support\ServiceProvider;
 
 class GoogleTranslateScraperServiceProvider extends ServiceProvider
@@ -13,7 +13,7 @@ class GoogleTranslateScraperServiceProvider extends ServiceProvider
     {
         $this->app->singleton('translate', function () {
             return [
-                'text' => new TextTranslateHideApi,
+                'text' => new TextTranslateHideApiService,
             ];
         });
 

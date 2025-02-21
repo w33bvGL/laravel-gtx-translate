@@ -15,11 +15,11 @@ class TextTranslationTest extends UnitTest
 
         $result = TextTranslator::translate('ru', 'hy', 'привет как дела?');
 
-        $data  = json_decode($result->getContent(), true, 512, JSON_UNESCAPED_UNICODE);
+        $this->logger->info(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
-        $this->logger->info(json_encode($data, JSON_UNESCAPED_UNICODE));
+        $this->assertInstanceOf(\Illuminate\Http\JsonResponse::class, $result);
 
-        $this->assertNotEmpty($result->getContent(), 'Translation result should not be empty');
-
+        $data = $result->getData(true);
+        $this->assertNotEmpty($data, 'Translation result should not be empty');
     }
 }

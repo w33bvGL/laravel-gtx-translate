@@ -24,7 +24,7 @@ class TextTranslator extends Facade
      * @param string $sourceLanguage The source language.
      * @param string $targetLanguage The target language.
      * @param string $text The text to be translated.
-     * @return JsonResponse The translation result in JSON format.
+     * @return JsonResponse The translation result in ?array format.
      */
     public static function translate(string $sourceLanguage, string $targetLanguage, string $text): JsonResponse
     {
