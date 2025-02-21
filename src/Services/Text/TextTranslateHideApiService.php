@@ -56,8 +56,8 @@ class TextTranslateHideApiService extends BaseService
             $options['proxy'] = $proxy;
         }
 
-        $response = $this->handleHttpRequestErrors($this->httpClient, $url, $options);
-        $data = json_decode($response, true);
+        $response       = $this->handleHttpRequestErrors($this->httpClient, $url, $options);
+        $data           = json_decode($response, true);
         $translations   = $this->extractTranslations($data);
 
         return response()->json([
