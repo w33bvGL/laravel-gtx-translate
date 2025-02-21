@@ -17,6 +17,9 @@ class TextTranslationTest extends UnitTest
 
         $this->logger->info(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
-        $this->assertNotEmpty($result, 'Translation result should not be empty');
+        $this->assertInstanceOf(\Illuminate\Http\JsonResponse::class, $result);
+
+        $data = $result->getData(true);
+        $this->assertNotEmpty($data, 'Translation result should not be empty');
     }
 }
