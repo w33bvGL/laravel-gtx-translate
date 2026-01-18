@@ -1,5 +1,0 @@
-/vendor/
-.idea
-docs
-.phpdoc
-composer.lock

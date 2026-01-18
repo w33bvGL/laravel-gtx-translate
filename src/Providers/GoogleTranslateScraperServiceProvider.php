@@ -18,14 +18,14 @@ class GoogleTranslateScraperServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/google-translate-scraper.php', 'googleTranslateScraper'
+            __DIR__.'/../../config/gtx-translate.php', 'googleTranslateScraper'
         );
     }
 
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../../config/google-translate-scraper.php' => config_path('google-translate-scraper.php'),
+            __DIR__.'/../../config/gtx-translate.php' => config_path('gtx-translate.php'),
         ]);
     }
 }

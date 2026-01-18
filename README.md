@@ -1,9 +1,7 @@
-# Google-Translate-Scraper
+# laravel-gtx-translate
 
-- [🇷🇺 README на русском](README_RU.md)
-- [🇬🇪 Հայերեն README](README_HY.md)
 
-**Google-Translate-Scraper** is a PHP Laravel library designed to scrape Google Translate to translate text between different languages. It provides a simple interface for performing translations.
+**laravel-gtx-translate** is a PHP Laravel library designed to scrape Google Translate to translate text between different languages. It provides a simple interface for performing translations.
 
 This package allows you to translate text from one language to another by scraping Google Translate. It handles tasks such as setting request timeouts, proxies, and supporting multiple languages. It is a solution for developers who want an offline translation tool without having to pay for API keys or rely on third-party services.
 
@@ -15,14 +13,14 @@ This package allows you to translate text from one language to another by scrapi
 - **Customizable User Agents**: Emulate different browsers to avoid detection.
 
 ## Installation
-You can install the **google-translate-scraper** library using Composer. To do this, run the following command in your terminal:
+You can install the **laravel-gtx-translate** library using Composer. To do this, run the following command in your terminal:
 
 ```bash
-composer require anidzen/google-translate-scraper
+composer require w33bvgl/laravel-gtx-translate
 ```
 
 ## Configuration
-After installing the library, you need to configure its parameters in the `google-translate-scraper.php` configuration file. In the file, you can specify the following parameters:
+After installing the library, you need to configure its parameters in the `laravel-gtx-translate.php` configuration file. In the file, you can specify the following parameters:
 
 - **base_url**: URL for the main resource.
 - **hidden_api_base_url**: URL for the hidden Google Translate API.
@@ -51,8 +49,8 @@ private string $targetLanguage;
 
 public function __construct(string $sourceLanguage = 'en', string $targetLanguage = 'ru')
 {
-$this->sourceLanguage = $sourceLanguage;
-$this->targetLanguage = $targetLanguage;
+    $this->sourceLanguage = $sourceLanguage;
+    $this->targetLanguage = $targetLanguage;
 }
 
 /**
@@ -64,14 +62,14 @@ $this->targetLanguage = $targetLanguage;
 */
 public function translateText(string $text): string
 {
-try {
-$response = TextTranslator::translate($this->sourceLanguage, $this->targetLanguage, $text);
-
-return $response->getContent();
-} catch (Exception $e) {
-throw new Exception('Translation failed: ' . $e->getMessage());
-}
-}
+    try {
+        $response = TextTranslator::translate($this->sourceLanguage, $this->targetLanguage, $text);
+        return $response->getContent();
+        
+        } catch (Exception $e) {
+            throw new Exception('Translation failed: ' . $e->getMessage());
+        }
+    }
 }
 ```
 
