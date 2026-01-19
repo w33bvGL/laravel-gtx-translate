@@ -1,7 +1,15 @@
 {
-    "name": "w33bvgl/google-translate-scraper",
-    "description": "google-translate-scraper",
+    "name": "w33bvgl/laravel-gtx-translate",
+    "description": "Free Google Translate (GTX) API scraper for Laravel",
+    "license": "MIT",
     "type": "library",
+    "keywords": [
+        "laravel",
+        "translate",
+        "google",
+        "gtx",
+        "scraper"
+    ],
     "autoload": {
         "psr-4": {
             "W33bvgl\\GtxTranslate\\": "src/"
@@ -66,7 +74,7 @@
         "lint": [
             "@php vendor/bin/pint --ansi",
             "@php vendor/bin/phpstan analyse --verbose --ansi"
-        ],
+        ]
     },
     "extra": {
         "laravel": {
