@@ -1,4 +1,6 @@
-vendor
 .idea
-docs
-.phpdoc
+/vendor
+/workbench
+.phpunit.result.cache
+.phpstan.cache
+.env

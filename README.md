@@ -1,76 +1,142 @@
-# laravel-gtx-translate
+# Laravel GTX Translate
 
+Laravel GTX Translate — вспомогательный Laravel-пакет для перевода текстовых строк
+с использованием публичного веб-интерфейса Google Translate (GTX).
 
-**laravel-gtx-translate** is a PHP Laravel library designed to scrape Google Translate to translate text between different languages. It provides a simple interface for performing translations.
+Пакет предназначен для базовых сценариев перевода текста и не является официальным
+клиентом Google Cloud Translation API. Он не требует API-ключей и не предоставляет
+гарантий стабильности или доступности сервиса.
 
-This package allows you to translate text from one language to another by scraping Google Translate. It handles tasks such as setting request timeouts, proxies, and supporting multiple languages. It is a solution for developers who want an offline translation tool without having to pay for API keys or rely on third-party services.
+-----------------------------------------------------------------------
 
-## Features
-- **Google Translate Scraping**: Translate text by scraping the hidden Google Translate API.
-- **Custom Timeouts**: Set minimum and maximum timeouts to delay requests.
-- **Proxy Support**: Use proxies for scraping to avoid rate limiting and blocking.
-- **Supported Languages**: Easily translate between multiple languages ​​supported by Google Translate.
-- **Customizable User Agents**: Emulate different browsers to avoid detection.
+## Назначение пакета
 
-## Installation
-You can install the **laravel-gtx-translate** library using Composer. To do this, run the following command in your terminal:
+Пакет может использоваться в следующих сценариях:
 
+- перевод интерфейсных строк
+- перевод пользовательского текстового ввода
+- локализация вспомогательного контента
+- административные панели
+- внутренние инструменты и утилиты
+
+Основная цель пакета — предоставить простой механизм перевода текста
+без сложной конфигурации и зависимости от платных API.
+
+-----------------------------------------------------------------------
+
+## Ограничения
+
+Пакет не рекомендуется использовать для:
+
+- массовых или параллельных переводов больших объёмов данных
+- систем с высокой степенью ответственности
+- коммерческих сервисов, требующих SLA
+- сценариев, где критична стабильность и предсказуемость API
+
+Используемый механизм перевода не является официальным API и может быть
+изменён или полностью недоступен в любой момент по инициативе стороннего сервиса.
+
+-----------------------------------------------------------------------
+
+## Установка
+
+Установка осуществляется через Composer:
 ```bash
 composer require w33bvgl/laravel-gtx-translate
 ```
 
-## Configuration
-After installing the library, you need to configure its parameters in the `laravel-gtx-translate.php` configuration file. In the file, you can specify the following parameters:
+После установки необходимо опубликовать конфигурационный файл:
+```bash
+php artisan vendor:publish --tag="gtx-translate-config"
+```
 
-- **base_url**: URL for the main resource.
-- **hidden_api_base_url**: URL for the hidden Google Translate API.
-- **timeout_min** and **timeout_max**: Set the minimum and maximum timeout for requests.
-- **proxy**: Set up a proxy if needed.
-- **text_max_length**: Maximum length of text that can be translated.
-- **supported_languages**: List of supported languages.
-- **user_agents**: Customized User-Agent to simulate different browsers.
+## Использование
 
-## Usage example
+### Использование через Facade
 
-To translate text, use the following example:
+Наиболее простой способ использования пакета — через Facade:
 
+```php
+use W33bvgl\GtxTranslate\Facades\Translate;
+
+$result = Translate::target('ru')
+    ->translate('Hello world');
+```
+Метод возвращает объект результата перевода.
+Структура результата не считается частью стабильного публичного API
+и может изменяться между версиями пакета.
+
+-----------------------------------------------------------------------
+
+### Пример использования в Laravel Controller
+
+Рекомендуемый способ интеграции — через контроллер:
 ```php
 <?php
 
-namespace Anidzen\GoogleTranslateScraper;
+namespace App\Http\Controllers;
 
-use Anidzen\GoogleTranslateScraper\Facades\TextTranslator;
-use Exception;
+use Illuminate\Http\Request;
+use W33bvgl\GtxTranslate\Facades\Translate;
 
-class GoogleTranslator
+class TranslateController extends Controller
 {
-private string $sourceLanguage;
-private string $targetLanguage;
+    public function translate(Request $request)
+    {
+        $text = (string) $request->input('text');
 
-public function __construct(string $sourceLanguage = 'en', string $targetLanguage = 'ru')
-{
-    $this->sourceLanguage = $sourceLanguage;
-    $this->targetLanguage = $targetLanguage;
-}
+        $result = Translate::target('ru')->translate($text);
 
-/**
-* Translates text from one language to another.
-*
-* @param string $text Text to translate.
-* @return string Translated text.
-* @throws Exception If an error occurred during translation.
-*/
-public function translateText(string $text): string
-{
-    try {
-        $response = TextTranslator::translate($this->sourceLanguage, $this->targetLanguage, $text);
-        return $response->getContent();
-        
-        } catch (Exception $e) {
-            throw new Exception('Translation failed: ' . $e->getMessage());
-        }
+        return response()->json([
+            'original' => $text,
+            'translated' => $result->translatedText ?? null,
+        ]);
     }
 }
 ```
+-----------------------------------------------------------------------
 
-In this example, we translate the text "Hello, world!" from English to Russian. The library returns a response in JSON format.
+## Использование через CLI
+
+Пакет предоставляет Artisan-команду:
+```bash
+php artisan gtx:translate
+```
+
+Команда предназначена исключительно для:
+
+- проверки конфигурации
+- локальной отладки
+- ручного тестирования
+
+CLI-интерфейс не предназначен для автоматизации массовых операций
+или использования в production-процессах.
+
+-----------------------------------------------------------------------
+
+## Тестирование
+
+Для запуска тестов используйте:
+```bash
+composer test
+```
+
+Пакет совместим с orchestra/testbench и может тестироваться
+в изолированном Laravel-окружении.
+
+-----------------------------------------------------------------------
+
+## Ответственность
+
+Использование пакета осуществляется на усмотрение разработчика.
+
+Автор пакета не несёт ответственности за:
+
+- недоступность сервиса перевода
+- изменение поведения стороннего сервиса
+- блокировки или ограничения со стороны Google
+- любые прямые или косвенные последствия использования
+
+-----------------------------------------------------------------------
+
+Author: w33bvgl
